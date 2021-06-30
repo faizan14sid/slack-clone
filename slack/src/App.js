@@ -1,9 +1,12 @@
-import "./App.css";
+
+import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <h1>Hello world</h1>
+      <h1>Ready to build slack clone
+      
+      </h1>
     </div>
   );
 }
