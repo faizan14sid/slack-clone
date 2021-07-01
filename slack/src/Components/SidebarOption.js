@@ -1,7 +1,7 @@
 import React from "react";
 import "./sidebarOption.css";
 
-export const SidebarOption = ({ Icon, title }) => {
+export const SidebarOption = ({ Icon, title, Iconright }) => {
   return (
     <div className="sidebarOption">
       {Icon && <Icon className="sidebarOption_icon" />}
@@ -13,6 +13,7 @@ export const SidebarOption = ({ Icon, title }) => {
           {title}{" "}
         </h3>
       )}
+      {Iconright && <Iconright className="sidebarOption_iconright" />}
     </div>
   );
 };

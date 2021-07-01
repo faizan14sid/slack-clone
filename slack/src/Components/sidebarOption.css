@@ -13,6 +13,10 @@
   font-size: 15px !important;
   padding: 10px;
 }
+.sidebarOption_iconright {
+  font-size: 15px !important;
+  padding-left: 130px;
+}
 .sidebarOption_channel {
   padding: 10px 0;
 }

@@ -48,12 +48,16 @@ export const Sidebar = () => {
       <SidebarOption Icon={FileCopyIcon} title="File Browser" />
       <SidebarOption Icon={ExpandLessIcon} title="Show less" />
       <hr />
-      <SidebarOption Icon={ExpandMoreIcon} title="Channels" />
-      <hr />
-      <SidebarOption Icon={AddIcon} addChannelOption title="Add Channel" />
+      <SidebarOption
+        Icon={ExpandMoreIcon}
+        title="Channels"
+        Iconright={AddIcon}
+      />
       {channels.map((channel) => (
         <SidebarOption title={channel.name} id={channel.id} />
       ))}
+      <hr />
+      <SidebarOption Icon={AddIcon} addChannelOption title="Add Channel" />
     </div>
   );
 };
