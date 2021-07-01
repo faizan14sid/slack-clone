@@ -4,7 +4,11 @@
   border-top: 1px solid #49274b;
   max-width: 260px;
 }
-
+.sidebar > hr {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #49274b;
+}
 .sidebar_header {
   padding: 13px;
   padding-bottom: 10px;
@@ -22,9 +26,10 @@
   flex: 1;
 }
 .sidebar_info > h2 {
-  font-size: 15px;
-  font-weight: 900;
+  font-size: 19px;
+  font-weight: 800;
   margin-bottom: 5px;
+  margin-top: 1px;
 }
 .sidebar_info > h3 {
   display: flex;
