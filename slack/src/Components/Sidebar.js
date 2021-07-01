@@ -50,10 +50,10 @@ export const Sidebar = () => {
       <hr />
       <SidebarOption Icon={ExpandMoreIcon} title="Channels" />
       <hr />
-      <SidebarOption Icon={AddIcon} addChannelOption="" title="Add Channel" />
-      {channels.map((channel) => {
-        <SidebarOption title={channel.name} id={channel.id} />;
-      })}
+      <SidebarOption Icon={AddIcon} addChannelOption title="Add Channel" />
+      {channels.map((channel) => (
+        <SidebarOption title={channel.name} id={channel.id} />
+      ))}
     </div>
   );
 };
