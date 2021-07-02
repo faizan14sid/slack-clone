@@ -14,9 +14,11 @@ import ExpandLessIcon from "@material-ui/icons/ExpandLess";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import AddIcon from "@material-ui/icons/Add";
 import db from "../firebase";
+import { useStateValue } from "../StateProvider";
 
 export const Sidebar = () => {
   const [channels, setChannels] = useState([]);
+  const [{ user }] = useStateValue();
   useEffect(() => {
     db.collection("channels").onSnapshot((snapshot) =>
       setChannels(
@@ -34,7 +36,7 @@ export const Sidebar = () => {
           <h2>Product Engineering</h2>
           <h3>
             <FibeManualReacordIcon />
-            Faizan Ahmad Siddiqui
+            {user?.displayName}
           </h3>
         </div>
         <CreateIcon />
