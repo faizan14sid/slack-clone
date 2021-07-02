@@ -4,11 +4,12 @@ import { useParams } from "react-router-dom";
 import StarBorderOutlinedIcon from "@material-ui/icons/StarBorderOutlined";
 import InfoOutlinedIcon from "@material-ui/icons/InfoOutlined";
 import db from "../firebase";
+import { Message } from "./Message";
 
 export const Chat = () => {
   const { channelId } = useParams();
   const [channelDetails, setChannelDetails] = useState(null);
-  const [channelMessages, setChannelMessages] = useState(null);
+  const [channelMessages, setChannelMessages] = useState([]);
 
   useEffect(() => {
     if (channelId) {
@@ -39,6 +40,16 @@ export const Chat = () => {
             <InfoOutlinedIcon /> Details
           </p>
         </div>
+      </div>
+      <div className="chat_message">
+        {channelMessages.map(({ message, user, userImage, timestamp }) => (
+          <Message
+            message={message}
+            timestamp={timestamp}
+            user={user}
+            userImage={userImage}
+          />
+        ))}
       </div>
     </div>
   );
